@@ -1,0 +1,26 @@
+{
+  "name": "tfjs-nthu-captcha",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "copy": "shx mkdir -p dist/src && shx cp src/content.js dist/src/ && shx cp -r src/model/. dist/src/model/",
+    "build": "parcel build src/service_worker.js --dist-dir dist/src/ && npm run copy",
+    "watch": "npm run copy && parcel watch src/service_worker.js --dist-dir dist/src/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "clang-format": "^1.2.3",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10",
+    "shx": "^0.3.4"
+  },
+  "resolutions": {
+    "node-fetch": "2.6.7"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.20.0"
+  }
+}
