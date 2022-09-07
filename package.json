@@ -4,13 +4,15 @@
   "description": "",
   "scripts": {
     "copy": "shx mkdir -p dist/src && shx cp src/content.js dist/src/ && shx cp -r src/model/. dist/src/model/",
-    "build": "parcel build src/service_worker.js --dist-dir dist/src/ && npm run copy",
-    "watch": "npm run copy && parcel watch src/service_worker.js --dist-dir dist/src/"
+    "build": "parcel build src/service_worker.js --dist-dir dist/src/ && npm run copy && npm run zip",
+    "watch": "npm run copy && parcel watch src/service_worker.js --dist-dir dist/src/",
+    "zip": "cross-zip dist nthu_captcha.zip"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@janpio/cross-zip-cli": "^0.0.4",
     "buffer": "^6.0.3",
     "clang-format": "^1.2.3",
     "parcel": "^2.3.2",

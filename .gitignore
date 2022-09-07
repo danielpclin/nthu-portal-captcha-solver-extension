@@ -2,3 +2,5 @@
 /node_modules/
 /dist/src/
 /.idea/
+
+/nthu_captcha.zip

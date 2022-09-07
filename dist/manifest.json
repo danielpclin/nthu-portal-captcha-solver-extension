@@ -1,12 +1,15 @@
 {
   "name": "NTHU portal captcha solver",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Solve captcha in NTHU portal using TensorFlow.js.",
   "host_permissions": [
     "https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/"
   ],
+  "permissions": [
+    "webNavigation"
+  ],
   "background": {
-    "service_worker": "src/service_worker.js"
+    "service_worker": "src/service_worker.js",
   },
   "content_scripts": [
     {

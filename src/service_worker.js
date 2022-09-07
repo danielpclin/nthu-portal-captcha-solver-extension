@@ -67,3 +67,7 @@ class ImageClassifier {
 }
 
 const imageClassifier = new ImageClassifier();
+
+chrome.webNavigation.onBeforeNavigate.addListener(function(){},{
+    urls: [{ urlPrefix: 'https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/' }]
+});
