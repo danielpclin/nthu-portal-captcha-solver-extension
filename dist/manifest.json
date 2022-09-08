@@ -9,7 +9,7 @@
     "webNavigation"
   ],
   "background": {
-    "service_worker": "src/service_worker.js",
+    "service_worker": "src/service_worker.js"
   },
   "content_scripts": [
     {
