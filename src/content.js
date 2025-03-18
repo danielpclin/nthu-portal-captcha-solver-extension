@@ -7,7 +7,7 @@ window.onload = function(){
     const img = new Image();
     img.crossOrigin = 'anonymous';
     img.onerror = function(e) {
-        console.warn(`Could not load image from external source ${src}.`);
+        console.warn(`Could not load image from external source.`);
     };
     img.onload = function(e) {
         img.width = IMAGE_WIDTH;
@@ -22,11 +22,10 @@ window.onload = function(){
             rawImageData: Array.from(imageData.data),
             width: img.width,
             height: img.height,
-            // url: document.getElementsByName("passwd2")[0].nextSibling.nextSibling.src
         }
         chrome.runtime.sendMessage(message, response => {
             document.getElementsByName("passwd2")[0].value = response.prediction;
         });
     };
-    img.src = document.getElementsByName("passwd2")[0].nextSibling.nextSibling.src;
+    img.src = document.getElementsByName("passwd2")[0].nextElementSibling.nextElementSibling.src;
 }
