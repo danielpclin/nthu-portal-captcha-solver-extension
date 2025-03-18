@@ -1,6 +1,6 @@
 // Size of the image expected.
-const IMAGE_WIDTH = 80;
-const IMAGE_HEIGHT = 30;
+const IMAGE_WIDTH = 104;
+const IMAGE_HEIGHT = 32;
 
 window.onload = function(){
     console.log("page load!");
@@ -27,5 +27,5 @@ window.onload = function(){
             document.getElementsByName("passwd2")[0].value = response.prediction;
         });
     };
-    img.src = document.getElementsByName("passwd2")[0].nextElementSibling.nextElementSibling.src;
+    img.src = document.querySelector('input[name=passwd2] ~ img').src;
 }

@@ -1,8 +1,8 @@
 import * as tf from '@tensorflow/tfjs';
 
 // Size of the image expected.
-const IMAGE_WIDTH = 80;
-const IMAGE_HEIGHT = 30;
+const IMAGE_WIDTH = 104;
+const IMAGE_HEIGHT = 32;
 
 const FIVE_SECONDS_IN_MS = 5000;
 
